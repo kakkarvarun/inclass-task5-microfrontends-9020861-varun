@@ -20,7 +20,7 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         // The key is what the Shell app will import
-        "./ProductsModule": "./src/app/products/products.module.ts",
+        './ProductsModule': './src/app/products/products.module.ts',
       },
       shared: share({
         "@angular/core": {

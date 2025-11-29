@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { loadRemoteModule } from '@angular-architects/module-federation';
-import { ProductsFallbackModule } from './products-fallback.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: 'products',
-        loadChildren: () => ProductsFallbackModule
-      }
-    ])
+    AppRoutingModule,   // <-- this is where the routes live
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
